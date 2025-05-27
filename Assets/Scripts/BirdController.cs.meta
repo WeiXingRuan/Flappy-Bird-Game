@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 179fdc873ccd8d042a1fd4d51e6dbfd9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gameController: {instanceID: 0}
+  - flyUp: {instanceID: 0}
+  - flyDown: {instanceID: 0}
+  - hitClip: {instanceID: 0}
+  - gameOverClip: {instanceID: 0}
+  - audioSource: {instanceID: 0}
+  - audioAdd: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
