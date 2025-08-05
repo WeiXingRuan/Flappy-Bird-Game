@@ -6,7 +6,7 @@ public class BirdController : MonoBehaviour
 {
     public float flyPower;
     public GameObject gameController;
-    
+
     public AudioClip flyUp;
     public AudioClip flyDown;
     public AudioClip hitClip;
@@ -14,22 +14,22 @@ public class BirdController : MonoBehaviour
     public AudioClip gameOverClip;
     public AudioSource audioSource;
     public AudioSource audioAdd;
-   
+
     // Start is called before the first frame update
     void Start()
     {
         flyPower = 10;
-        
+
         audioSource = GetComponent<AudioSource>();
         audioAdd = GetComponent<AudioSource>();
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if (Input.GetMouseButton(0)) 
+
+        if (Input.GetMouseButton(0))
         {
             audioSource.clip = flyUp;
             if (gameController.GetComponent<GameController>().isStart)
@@ -38,7 +38,7 @@ public class BirdController : MonoBehaviour
             }
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, flyPower));
         }
-       
+
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -52,10 +52,10 @@ public class BirdController : MonoBehaviour
     {
         audioSource.clip = gameOverClip;
         audioSource.Play();
-        
+
         gameController.GetComponent<GameController>().EndGame();
 
 
     }
- 
+
 }
